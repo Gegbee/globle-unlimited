@@ -14,8 +14,11 @@ function generateKeyNew(list: any[], day: string) {
   const key = Math.floor(dayCode / parseInt(SHUFFLE_KEY + "5")) % list.length;
   return key;
 }
-
-const key = generateKeyNew(countryData, today);
-
+function getRandomInt() {
+   return Math.floor(Math.random() * countryData.length);
+ }
+//const key = generateKeyNew(countryData, today);
+const key = getRandomInt();
 export const answerCountry = countryData[key];
 export const answerName = answerCountry.properties.NAME;
+console.log(answerName)

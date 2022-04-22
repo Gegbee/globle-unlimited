@@ -6,6 +6,8 @@ import { ThemeProvider } from "./context/ThemeContext";
 import LocaleProvider from "./i18n";
 import BodyStyle from "./components/BodyStyle";
 
+localStorage.clear();
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
